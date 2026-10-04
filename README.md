@@ -1,6 +1,6 @@
 # Computer Networks Course Project: Private Network Service Platform
 
-This repository contains the configuration and scripts for our team's Private Network Service Platform project. The goal of this project is to build a complete local service reachable through a private domain name with full packet evidence of the DNS → TCP → TLS → HTTP flow, and subsequently harden it with resilience and failover mechanisms.
+This repository contains the configuration and scripts for our team's Private Network Service Platform project. The goal of this project is to build a complete local service reachable through a private domain name with full packet evidence of the DNS → TCP → TLS → HTTP flow.
 
 ## Project Structure
 
@@ -47,15 +47,8 @@ Based on the project requirements, the following tasks are still pending:
 - [ ] **Task E (TLS Certificates)**: Generate a self-signed TLS certificate (using OpenSSL or mkcert) for `app.team1.test` and install it on the Nginx edge server and trust it on client Macs.
 - [ ] **Task G (Packet Capture)**: Perform the Wireshark packet captures for the final protocol flow (DNS, TCP Handshake, TLS Handshake, HTTP Headers).
 
-### Phase 2: Harden & Recover
-- [ ] **Extension A**: Set up a Backup DNS Resolver.
-- [ ] **Extension B**: Configure DNS TTL and demonstrate controlled record changes.
-- [ ] **Extension C**: Set up Service Isolation (macOS firewall / pf rules on Mac 3 and Mac 4 to only allow traffic from Mac 2).
-- [ ] **Extension D**: Configure Nginx High-Availability Failover behavior (detecting backend unavailability).
-- [ ] **Extension E**: Configure a standby Edge server for DNS-based migration.
-
 ### Deliverables to Create
-- [ ] **Architecture Document**: Network topology diagram, IP table, request-flow diagram.
-- [ ] **Configuration Bundle**: Collect `dnsmasq.conf`, `nginx.conf`, TLS notes, firewall rules into one folder.
-- [ ] **Evidence Folder**: Screenshots of DNS resolution, curl output, Wireshark captures, and failure demonstrations.
-- [ ] **Phase 2 Final Report**: Document Phase 2 resilience tests, troubleshooting findings, and learnings.
+- [ ] **Architecture Document**: Network topology diagram, IP table, request-flow diagram showing each protocol layer.
+- [ ] **Configuration Bundle**: Collect `dnsmasq.conf`, `nginx.conf`, TLS notes, and backend launch instructions into one folder.
+- [ ] **Evidence Folder**: Screenshots/exports of DNS resolution, curl/browser output with headers, and Wireshark captures for DNS, TCP handshake, TLS handshake, and HTTP caching demo.
+- [ ] **Phase 1 Checkpoint**: Prepare for a working live system demonstration.
