@@ -11,7 +11,7 @@ The project is deployed entirely locally across 4 macOS laptops connected to the
 - **Mac 3 - Backend Server A:** Runs a Python REST API backend on port 3001.
 - **Mac 4 - Backend Server B:** Runs a Python REST API backend on port 3002.
 
-## 🛠️ Features Implemented
+## 🛠️ Features Implemented (Phase 1 Complete)
 
 - **Private LAN Setup**: Configuration of a private local network for seamless machine-to-machine communication.
 - **Custom DNS Resolution**: A lightweight `dnsmasq` server configured on Mac 1 to handle DNS queries for the `.test` private domain namespace.
@@ -41,3 +41,22 @@ The project is deployed entirely locally across 4 macOS laptops connected to the
    ```bash
    ./test-phase1.sh
    ```
+
+---
+
+## 📝 Tasks Remaining (Phase 2 & Deliverables)
+
+Phase 1 code is fully implemented. The following tasks are pending for future project phases and final submission:
+
+### Phase 2: Harden & Recover (Extensions)
+- [ ] **Extension A**: Set up a Backup DNS Resolver.
+- [ ] **Extension B**: Configure DNS TTL and demonstrate controlled record changes.
+- [ ] **Extension C**: Set up Service Isolation (macOS firewall / pf rules on Mac 3 and Mac 4 to only allow traffic from Mac 2).
+- [ ] **Extension D**: Configure High-Availability Failover behavior (detecting backend unavailability).
+- [ ] **Extension E**: Configure a standby Edge server for DNS-based migration.
+
+### Final Deliverables
+- [ ] **Architecture Document**: Network topology diagram, IP table, request-flow diagram showing each protocol layer.
+- [ ] **Configuration Bundle**: Collect `dnsmasq.conf`, proxy configurations, TLS notes, and backend launch instructions into one folder.
+- [ ] **Evidence Folder**: Screenshots/exports of DNS resolution, curl/browser output with headers, and Wireshark captures for DNS, TCP handshake, TLS handshake, and HTTP caching demo.
+- [ ] **Phase 2 Final Report**: Document Phase 2 resilience tests, troubleshooting findings, and learnings.
